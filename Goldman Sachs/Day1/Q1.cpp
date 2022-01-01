@@ -1,8 +1,8 @@
-Given an array of strings, return all groups of strings that are anagrams.
-https://practice.geeksforgeeks.org/problems/print-anagrams-together/1/
+// Given an array of strings, return all groups of strings that are anagrams.
+// https://practice.geeksforgeeks.org/problems/print-anagrams-together/1/
 
-Sol 1. :- https://practice.geeksforgeeks.org/viewSol.php?subId=3847b68b901b468507a1c8db23857198&pid=701966&user=2019kucp1053
-time complexity:- o(n*n*mlogm)
+// Sol 1. :- https://practice.geeksforgeeks.org/viewSol.php?subId=3847b68b901b468507a1c8db23857198&pid=701966&user=2019kucp1053
+// time complexity:- o(n*n*mlogm)
 vector<vector<string> > Anagrams(vector<string>& string_list) {
         //code here
         int n = string_list.size();
@@ -37,8 +37,8 @@ vector<vector<string> > Anagrams(vector<string>& string_list) {
     }
     
 
-Sol 2 :- https://practice.geeksforgeeks.org/viewSol.php?subId=fb7d9667d683206876a36c62ed9b6317&pid=701966&user=2019kucp1053
-time complexity :- o(n*mlogm)
+// Sol 2 :- https://practice.geeksforgeeks.org/viewSol.php?subId=fb7d9667d683206876a36c62ed9b6317&pid=701966&user=2019kucp1053
+// time complexity :- o(n*mlogm)
  vector<vector<string> > Anagrams(vector<string>& string_list) {
         //code here
         int n = string_list.size();
@@ -64,8 +64,8 @@ time complexity :- o(n*mlogm)
         
     }
 
-Sol 3:- https://practice.geeksforgeeks.org/viewSol.php?subId=e7e93ed491bc22599cff223d2768ab89&pid=701966&user=2019kucp1053
-time complexity :- o(n*m)
+// Sol 3:- https://practice.geeksforgeeks.org/viewSol.php?subId=e7e93ed491bc22599cff223d2768ab89&pid=701966&user=2019kucp1053
+// time complexity :- o(n*m)
 vector<vector<string> > Anagrams(vector<string>& string_list) {
         //code here
         int n = string_list.size();
