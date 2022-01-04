@@ -21,6 +21,21 @@
         return ans;
     }
 
-// Sol 2: 
+// Sol 2: https://leetcode.com/submissions/detail/612918144/
 // time:- o(n) space:- o(1)
-// will do later
+ int minSubArrayLen(int target, vector<int>& nums) {
+        int n = nums.size(), i = 0, ans = n+1, sum = 0, r = 0;
+       
+        for(;i<n; i++){
+            while(r<n && sum <target){
+                sum += nums[r++];
+            }
+            // cout << i << " " << r << " " << sum << endl;
+           if(sum>=target) ans = min(ans, r-i);
+            sum -= nums[i];
+        }
+        
+        if(ans == n+1) return 0;
+        return ans;
+        
+    }
