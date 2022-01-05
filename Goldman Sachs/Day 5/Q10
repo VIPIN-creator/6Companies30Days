@@ -1,0 +1,6 @@
+    10. Find max 10 numbers in a list having 10M entries.
+     sol 1- Just sort and take first 10 entries 
+            time :- o(nlogn)
+    sol2 - Maintain a min_priority_queue and keep adding elements to it till its size becomes 10. Then for each element check if it is greater than the top element then do pop() and add that element to the queue.
+            time :- o(nlogk)
+           
