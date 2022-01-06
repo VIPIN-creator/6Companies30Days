@@ -21,3 +21,30 @@
         
         return ans;
     }
+
+// Sol 2:- using multiset time :- o(nlogk) space :o(k)
+vector<int> maxSlidingWindow(vector<int>& nums, int k) {
+         vector<int> ans;
+        int mx = 0, i, j, n = nums.size();
+            
+        multiset<int> s;
+        
+        for(i=0; i<k; i++){
+           s.insert(nums[i]);
+        }
+        ans.push_back(*(s.rbegin()));
+        
+        i = 1;
+        while(i<n-k+1){
+            
+            s.erase(s.find(nums[i-1]));
+            s.insert(nums[i+k-1]);
+            
+            ans.push_back(*(s.rbegin()));
+            
+            i++;
+        }
+        
+        return ans;
+        
+    }
