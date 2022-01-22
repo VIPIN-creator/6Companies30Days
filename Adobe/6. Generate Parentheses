@@ -1,0 +1,27 @@
+vector<string> ans;
+    
+    // The idea is to iterate only on valid sequence;
+    
+    void solve(int o, int c, string s){
+       if(o == 0 && c == 0){
+           ans.push_back(s);
+       }
+       
+       if(o<c){
+           solve(o, c-1, s+')');
+       }
+       
+       if(o){
+           solve(o-1, c, s+'(');
+       }
+       
+       return;
+    }
+    
+    vector<string> AllParenthesis(int n) 
+    {
+        // Your code goes here 
+        string s;
+         solve(n, n, s);
+         return ans;
+    }
